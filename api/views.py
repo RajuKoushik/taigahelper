@@ -55,11 +55,17 @@ def home(request):
             sprints = data['milestones']
 
             sprint_list = []
-            for x in members:
+            sprint_slug_list = []
+            for x in sprints:
                 print(x['name'])
-                sprint_list.append(x['name'])
+                listy =[]
+                listy.append({'sprint_name':x['name']})
+                sprint_list.append(listy)
+                sprint_slug_list.append(x['slug'])
 
             print (sprint_list)
+
+            print(sprint_slug_list)
 
 
 
